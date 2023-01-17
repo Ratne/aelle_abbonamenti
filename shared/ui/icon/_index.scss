@@ -1,0 +1,33 @@
+.icon-svg-mask {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-size: auto;
+  mask-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.icon-btn {
+  padding: 4px;
+  border-radius: $btn-border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+
+  &.btn-danger {
+    background-color: #d84a38;
+  }
+
+  &.btn-default {
+    background-color: #62A9C5;
+
+  }
+}

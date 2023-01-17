@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons8-unavailable</title>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lista-pazienti-copy-2" transform="translate(-285.000000, -796.000000)" fill="#3A3C58" fill-rule="nonzero">
+            <g id="icons8-unavailable" transform="translate(285.000000, 796.000000)">
+                <path d="M10,0 C4.4889971,0 0,4.4889971 0,10 C0,15.511003 4.4889971,20 10,20 C15.511003,20 20,15.511003 20,10 C20,4.4889971 15.511003,0 10,0 Z M10,2 C14.430123,2 18,5.5698774 18,10 C18,11.85307 17.369262,13.55056 16.318359,14.904297 L5.0957031,3.6816406 C6.4494397,2.6307377 8.14693,2 10,2 Z M3.6816406,5.0957031 L14.904297,16.318359 C13.55056,17.369262 11.85307,18 10,18 C5.5698774,18 2,14.430123 2,10 C2,8.14693 2.6307377,6.4494397 3.6816406,5.0957031 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

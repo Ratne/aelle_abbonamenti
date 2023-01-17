@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>linde/form/checkbox</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-Copy-3" transform="translate(0.000000, 0.591912)">
+            <rect id="Rectangle" stroke="#D2E1EB" fill="#FFFFFF" x="0.5" y="0.5" width="23" height="23"></rect>
+            <g id="linde/form/check-icon" transform="translate(6.000000, 7.000000)" stroke="#00A0E1">
+                <polyline id="Path-2" points="0 4.55484598 2.62341285 9.10969195 11.4795691 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

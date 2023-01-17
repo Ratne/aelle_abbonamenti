@@ -1,0 +1,12 @@
+@import "variables";
+.shared-toastSuccess {
+  .toast {
+    border: none;
+    & .toast-header {
+      border-radius: 8px;
+      & .close {
+        color: #565b6f;
+      }
+    }
+  }
+}

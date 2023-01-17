@@ -1,0 +1,21 @@
+.sh {
+  &.btn-secondary {
+    color: $light;
+
+    &:hover {
+      background-color: rgba($link-hover-color, 0.5);
+      color: $light;
+    }
+
+    &-outline {
+      background-color: #fff;
+      border: 1px solid $secondary;
+      color: $secondary;
+
+      &:hover {
+        background-color: #D2D9E3;
+      }
+    }
+
+  }
+}

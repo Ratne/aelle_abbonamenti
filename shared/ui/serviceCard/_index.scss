@@ -1,0 +1,48 @@
+.service-card {
+  background: $light;
+  border-radius: $border-radius;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+
+  .service-img {
+    width: 100%;
+    height: 210px;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    position: relative;
+    z-index: 1;
+
+    .info {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 2;
+    }
+  }
+
+  .service-title {
+    padding: 1rem;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &:not(.inactive):hover {
+    .service-img {
+      box-shadow: $box-shadow-hover;
+    }
+  }
+
+  &.inactive {
+    .service-img {
+      .s-img {
+        opacity: 0.5;
+        filter: grayscale(100%);
+      }
+    }
+
+    .service-title {
+      color: $gray-200;
+    }
+  }
+}

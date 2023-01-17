@@ -1,0 +1,30 @@
+.form-group {
+  margin-bottom: 18px;
+
+  & .shared-label {
+    margin-bottom: 8px;
+  }
+
+  & .inline {
+    display: flex;
+    align-items: center;
+
+    & .shared-label {
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+  }
+
+  & .inlineFormReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    & .shared-label {
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+  }
+
+}

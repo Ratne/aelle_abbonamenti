@@ -1,0 +1,36 @@
+.pagination {
+  gap: 4px;
+  margin-bottom: 0px;
+
+  .page-item {
+    cursor: pointer;
+
+    .page-link {
+      border: 1px solid $secondary-dark;
+      color: $secondary-dark;
+      background-color: $light;
+      border-radius: $btn-border-radius;
+    }
+
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+
+      .page-link {
+        opacity: 0.5;
+      }
+    }
+
+    &.active {
+      cursor: default;
+
+      .page-link {
+        background-color: $secondary;
+        color: $light;
+        border-color: $secondary;
+      }
+    }
+
+
+  }
+}

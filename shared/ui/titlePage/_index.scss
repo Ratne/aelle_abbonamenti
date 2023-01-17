@@ -1,0 +1,22 @@
+.title-page {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title-text {
+    font-size: 24px;
+    color: $dark;
+    font-weight: 900;
+    margin-bottom: 0;
+    line-height: unset;
+  }
+
+  .subtitle-text {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: unset;
+  }
+
+}
+

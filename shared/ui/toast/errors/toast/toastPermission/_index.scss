@@ -1,0 +1,10 @@
+@import "variables";
+.shared-toastPermission {
+  .toast {
+    & .toast-header {
+      & .close {
+        color: #565b6f;
+      }
+    }
+  }
+}

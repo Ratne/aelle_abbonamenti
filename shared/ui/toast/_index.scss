@@ -1,0 +1,26 @@
+@import "variables";
+@import "errors";
+
+.shared-toast {
+  margin-bottom: 4px;
+
+  .toast {
+
+    .toast-header {
+      min-height: 40px;
+      font-size: 16px;
+      background-color: transparent;
+      padding: 12px;
+      border: none;
+
+      .btn-close {
+        color: $light;
+      }
+    }
+
+    .toast-body {
+      background-color: $light;
+      border-radius: $border-radius;
+    }
+  }
+}

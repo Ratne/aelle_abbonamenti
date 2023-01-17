@@ -1,0 +1,21 @@
+.shared-user-avatar {
+  background-color: $gray-200;
+  color: $dark;
+  padding: 8px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  line-height: normal;
+  font-family: $font-family-sans-serif;
+  font-size: 24px;
+  margin-right: 6px;
+
+  &.big {
+    width: 72px;
+    height: 72px;
+  }
+}

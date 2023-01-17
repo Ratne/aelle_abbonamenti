@@ -1,0 +1,114 @@
+.custom-radio {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+
+  & + label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    line-height: 1rem;
+    padding: 0px 32px;
+
+
+    &::before,
+    &::after {
+      content: '◎';
+      position: absolute;
+      color: $gray-200;
+      text-align: center;
+      top: 0;
+      left: 0;
+
+      font-size: 24px;
+    }
+
+    &::before {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1rem;
+
+      background-color: $light;
+      color: #ffffff;
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+
+      &::before {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &:checked {
+    & + label {
+      color: $dark !important;
+    }
+
+    & + label::before {
+    }
+  }
+
+  &:checked {
+    & + label::before {
+      content: '◉';
+      background-color: $light;
+      color: $dark;
+      font-size: 24px;
+    }
+  }
+
+  &:checked {
+    & + label::after {
+      content: ' ';
+
+    }
+  }
+
+  & + label {
+    &::before {
+    }
+  }
+
+  &[type=checkbox] {
+    & + label {
+      &::before {
+        /* Remove the border radius on the checkboxes for a square effect */
+      }
+    }
+  }
+
+}
+
+/* Styles used to test out and reproduce out your approach */
+.container.control-experiment {
+  background: #fee;
+
+
+  span,
+  input {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+  }
+
+  input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+
+  input[type='radio'] {
+    // display: none; /* Uncommenting this out makes all your inputs unsable.*/
+  }
+}

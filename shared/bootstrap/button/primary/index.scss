@@ -1,0 +1,36 @@
+.sh {
+  &.btn-primary {
+    color: #fff;
+
+    &:hover {
+      background-color: $link-hover-color;
+      color: $light;
+    }
+
+    &:active {
+      color: $light;
+    }
+
+    &:focus {
+      color: $light;
+    }
+
+    &:disabled {
+      color: $light;
+      background-color: $primary;
+      opacity: 0.3;
+    }
+
+    &.-outline {
+      background-color: transparent;
+      color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        color: $link-hover-color;
+        border-color: $link-hover-color;
+        background-color: rgba(237, 247, 248, 0.486);
+      }
+    }
+  }
+}

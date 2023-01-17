@@ -1,0 +1,13 @@
+@import "variables";
+.shared-error {
+  color: $colorError;
+  font-size: $fontSizeError;
+  font-family: $fontFamilyError;
+  margin-top: $marginTopError;
+  margin-bottom: $marginBottomError;
+  //height: $heightError;
+  text-transform: none;
+  &.success {
+    color: $colorSuccessError;
+  }
+}

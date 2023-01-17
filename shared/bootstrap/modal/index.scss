@@ -1,0 +1,130 @@
+.sh {
+  &.modal {
+    overflow: auto;
+    background-color: rgba($light, 0.8);
+
+    .modal-dialog {
+      .modal-content {
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+        border-color: $gray;
+
+        .modal-header {
+          margin: 15px 20px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 8px;
+          z-index: 1055;
+
+          button.sh-close {
+            float: right;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 20px;
+            padding: 0px;
+            text-decoration: none;
+            opacity: 1;
+            background: none;
+            border: none;
+          }
+
+          .modal-title {
+            font-size: 24px;
+            color: #3A3C58;
+            font-weight: 900;
+            margin-bottom: 0;
+            line-height: unset;
+          }
+        }
+
+        .modal-body {
+          padding-left: 0px;
+          padding-right: 0px;
+          margin: 15px 10px;
+        }
+
+        .modal-footer {
+          border-top: none;
+          background-color: #fff;
+          padding-left: 1.25em;
+          padding-right: 1.25em;
+        }
+      }
+    }
+
+    &.modal-vh {
+      .modal-dialog {
+        .modal-content {
+          min-height: calc(100vh - 60px);
+          max-height: calc(100vh - 60px);
+          overflow: auto;
+        }
+
+        .modal-header {
+          position: sticky;
+          top: 0;
+          background-color: inherit;
+          z-index: 1055;
+        }
+
+        .modal-body {
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          margin: 0px 10px;
+        }
+
+        .modal-footer {
+          border-top: none;
+          background-color: #fff;
+          padding: 2em;
+          padding-left: 1.25em;
+          padding-right: 1.25em;
+        }
+      }
+    }
+
+    &.event-success {
+      .modal-dialog {
+        .modal-content {
+          min-height: auto;
+          max-height: auto;
+          overflow: auto;
+        }
+      }
+
+      .modal-header {
+        border: none;
+      }
+
+      .modal-body {
+        .title-heading {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0px 15px;
+          padding-top: 24px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid $gray;
+
+
+          .modal-title {
+            font-size: 28px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .modal-header {
+      margin: 0px 25px;
+      padding: 1rem 0px;
+    }
+
+    .modal-footer {
+      border-top: none;
+    }
+
+  }
+}

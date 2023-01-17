@@ -1,0 +1,10 @@
+.sh {
+    &.footer {
+        position: absolute;
+        bottom: 0;
+        background: $gradient-light;
+        font-size: 0.8em;
+        padding: 4px 0px 4px 0px;
+        width: 100%;
+    }
+}

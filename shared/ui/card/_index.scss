@@ -1,0 +1,19 @@
+.sh {
+  &.card {
+    background: $light;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    box-shadow: $box-shadow;
+    border: none;
+    height: 100%;
+
+    &.v-height {
+      height: calc(100% - 90px);
+      width: 100%;
+    }
+
+    &.v-auto {
+      height: auto;
+    }
+  }
+}

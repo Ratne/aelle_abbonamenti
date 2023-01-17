@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lista-pazienti" transform="translate(-598.000000, -182.000000)" fill="#3A3C58" fill-rule="nonzero">
+            <g id="Group-22" transform="translate(290.000000, 169.000000)">
+                <g id="icons8-search" transform="translate(308.000000, 13.000000)">
+                    <path d="M5.6,0 C2.51668112,0 0,2.51668112 0,5.6 C0,8.6833192 2.51668112,11.2 5.6,11.2 C6.9983984,11.2 8.2760072,10.6784192 9.2593752,9.825 L9.6,10.1656248 L9.6,11.2 L14.4,16 L16,14.4 L11.2,9.6 L10.1656248,9.6 L9.825,9.2593752 C10.6784192,8.2760072 11.2,6.9983984 11.2,5.6 C11.2,2.51668112 8.6833192,0 5.6,0 Z M5.6,1.6 C7.8186144,1.6 9.6,3.38138528 9.6,5.6 C9.6,7.8186144 7.8186144,9.6 5.6,9.6 C3.38138528,9.6 1.6,7.8186144 1.6,5.6 C1.6,3.38138528 3.38138528,1.6 5.6,1.6 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

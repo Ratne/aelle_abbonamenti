@@ -1,0 +1,29 @@
+.sh {
+  &.tab-pills {
+    z-index: 1;
+
+    .nav-pills {
+      gap: 8px;
+
+      .nav-item {
+        .nav-link {
+          border: none;
+          border-bottom: none;
+          cursor: pointer;
+          font-size: 18px;
+          //box-shadow: $box-shadow;
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+          background-color: $light;
+          border-bottom: 4px solid $light;
+          color: $secondary;
+
+          &:not(.active) {
+            background-color: $gray-light;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

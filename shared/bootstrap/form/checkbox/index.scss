@@ -1,0 +1,67 @@
+@import 'variables';
+
+.shared-checkbox {
+  display: flex;
+  align-items: center;
+  //min-height: 64px;
+
+  input.checkbox-sh {
+    visibility: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+
+    &:before {
+      visibility: visible;
+      appearance: auto;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      font-size: $sizeEmpty;
+      content: url('icon/checkbox-unchecked.svg');
+      position: absolute;
+      color: $colorCheckbox;
+    }
+
+    &:checked {
+      &:after {
+        visibility: visible;
+        appearance: auto;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        content: url('icon/checkbox-checked.svg');
+        position: absolute;
+        font-size: $sizeCheckbox;
+        color: $colorCheckbox;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &:active {
+      &:before {
+
+      }
+
+      &:checked {
+        &:after {
+
+        }
+      }
+    }
+  }
+
+
+  & label {
+    margin-top: 10px;
+    margin-left: 18px !important;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+
+}

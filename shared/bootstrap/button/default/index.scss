@@ -1,0 +1,35 @@
+.sh {
+  &.btn {
+    width: auto;
+    height: 44px;
+    text-transform: uppercase;
+    border-radius: $btn-border-radius;
+    line-height: normal;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: $box-shadow;
+
+    &.btn-default {
+      background-color: $default;
+      color: $light;
+    }
+
+    &.default {
+      background-color: $light;
+    }
+
+
+    &:focus,
+    &:focus-visible {
+      /*    outline: none;
+      box-shadow: none; */
+    }
+
+    img {
+      //margin-right: 8px;
+    }
+  }
+}

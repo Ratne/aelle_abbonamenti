@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 28</title>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-28">
+            <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
+            <g id="icons8-trash" transform="translate(2.000000, 0.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M5.25,0 L4.375,0.9 L0,0.9 L0,2.7 L0.875,2.7 L0.875,16.2 C0.875,16.6699998 1.04241279,17.149149 1.37231448,17.4884769 C1.70221616,17.8278039 2.16805558,18 2.625,18 L11.375,18 C11.8319442,18 12.2977838,17.8278039 12.6276859,17.4884769 C12.9575871,17.149149 13.125,16.6699998 13.125,16.2 L13.125,2.7 L14,2.7 L14,0.9 L9.625,0.9 L8.75,0 L5.25,0 Z M2.625,2.7 L11.375,2.7 L11.375,16.2 L2.625,16.2 L2.625,2.7 Z M4.375,4.5 L4.375,14.4 L6.125,14.4 L6.125,4.5 L4.375,4.5 Z M7.875,4.5 L7.875,14.4 L9.625,14.4 L9.625,4.5 L7.875,4.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
