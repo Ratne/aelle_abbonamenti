@@ -5,7 +5,7 @@ import {SignJWT} from "jose";
 
 
 export default async function handler(req: any, res: any) {
-    const client = await clientPromise;
+    await clientPromise();
 
     switch (req.method) {
          case "POST":

@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
         { status: 401, headers: { 'content-type': 'application/json' } }
     )
      jwtVerify(token, new TextEncoder().encode(process.env.TOKEN_SECRET as string)).then((res => {
-        //request.cookies.set('user', JSON.stringify(res));
+
         return NextResponse.next()
     })).catch((err) => {
         return new NextResponse(

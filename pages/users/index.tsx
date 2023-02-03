@@ -23,7 +23,9 @@ export default function Users() {
     <link rel="icon" href="/favicon.ico" />
         </Head>
             <CreateUser />
-
+            {
+                JSON.stringify(users)
+            }
 
     </div>
 )
