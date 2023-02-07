@@ -20,8 +20,6 @@ export default async function handler(req, res) {
             break;
         case "GET":
             const allCart = await Cart.find({})
-            .populate({path:'products', model: Product })
-            .populate({path:'subscription', model: Subscription })
             res.json({ status: 200, data: allCart });
             break;
     }
