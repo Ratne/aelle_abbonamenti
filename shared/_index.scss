@@ -1,0 +1,15 @@
+
+@import "bootstrap";
+@import "external_lib";
+@import "ui";
+@import "mediaQuery";
+
+.pointer {
+  cursor: pointer;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

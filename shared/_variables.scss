@@ -1,0 +1,93 @@
+// Typography
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-size-base: 1rem; //16
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: $font-size-base * 2; //32
+$h2-font-size: $font-size-base * 1.75; //28
+$h3-font-size: $font-size-base * 1.32; //21
+$h4-font-size: $font-size-base * 1.13; //18
+$h5-font-size: $font-size-base * 1.1; //
+$h6-font-size: $font-size-base;
+
+
+// Colors
+$primary: #6AC562;
+$secondary: #D94BA6;
+$secondary-dark: #A57E97;
+$default: #3A3C58;
+$dark: #3A3C58;
+$dark-hover: #454769;
+
+
+$gray: #DCE6EB;
+$gray-200: #D8D8D8;
+
+//$bg-dark: #262626;
+$bg-light: #F5F7F7;
+$gray-light: #f8f8f8;
+$gray-dark: #6E7878;
+$light: #fff;
+$error: #dc3545;
+$warning: #DC7800;
+$success-light: #F6F9E8;
+
+$grays: (
+        "200": $gray-200,
+);
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "secondary-dark": $secondary-dark,
+        "default": $default,
+        "dark": $dark,
+        "gray": $gray,
+        "gray-200": $gray-200,
+        "bg-light": $bg-light,
+        "gray-dark": $gray-dark,
+        "gray-light": $gray-light,
+        "light": $light,
+        "error": $error,
+        "warning": $warning,
+        "success-light": $success-light,
+);
+
+
+// Body
+$body-bg: $light;
+$body-color: $dark;
+$gradient-gray: linear-gradient(46deg, rgba(237, 242, 245, 0.50) 0%, rgba(231, 236, 232, 0.50) 100%);
+$gradient-light: linear-gradient(135deg, #F1F5F7 0%, #DCE6EB 100%);
+$light-blue: #DCE6EB;
+$link-color: $primary;
+$link-hover-color: #26aee6;
+$link-decoration: none;
+
+$border-color: rgba(0, 47, 90, 0.40);
+$border-radius: 1rem;
+$btn-border-radius: 1rem/2;
+
+$box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.24);
+$box-shadow-hover: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+
+$input-btn-padding-y: 0.563em;
+$input-bg: $gray-light;
+
+$input-height: 44px;
+$labelColor: $dark;
+$dropdown-link-hover-bg: $gray-200;
+
+
+$nav-pills-border-radius: $border-radius;
+$nav-pills-link-active-color: $light;
+$nav-pills-link-active-bg: $secondary;
+$nav-link-color: $secondary;
+$nav-link-padding-y: .5rem !default;
+$nav-link-padding-x: 1.5rem;

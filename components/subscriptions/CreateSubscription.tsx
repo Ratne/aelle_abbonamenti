@@ -35,7 +35,7 @@ const CreateSubscription: React.FC = () => {
 
     return (
 
-        <div className={"login-container mt-xl-5 mt-sm-0"}>
+        <div className={"container mt-xl-5 mt-sm-0"}>
 
             <div><h2 className={"text-center"}>Crea nuovo abbonamento</h2></div>
 
