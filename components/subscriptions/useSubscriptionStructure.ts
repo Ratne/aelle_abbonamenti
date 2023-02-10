@@ -1,6 +1,7 @@
 import {createStructureForm} from "../../shared/utils/forms/useStructureForm";
+import {getArrayByNumber} from "../../shared/utils/arrayUtils";
 
-export const useSubscriptionStructure = (isEdit: boolean = false) => {
+export const useSubscriptionStructure = (products: any[] = [], dataForm: any, isEdit: boolean = false) => {
 
     const structureData = createStructureForm([
             {
@@ -18,9 +19,11 @@ export const useSubscriptionStructure = (isEdit: boolean = false) => {
             label: "Seleziona i prodotti",
             dataElement: {
                 type: 'text',
-                multi: true
-            }, options:[{value: "63dd2b55c1f8a9be39e1d3de", label: "Demo"}]
-            ,
+            },
+            multiple: true,
+            options: products.map(ele => ({
+                label: ele.name, value: ele._id
+            })),
             col: {xs: "12"},
         },
          {
@@ -51,7 +54,7 @@ export const useSubscriptionStructure = (isEdit: boolean = false) => {
                     name: "billingTime",
                     label: "Preleva Ogni",
                     dataElement: {
-                        type: 'number',
+                        type: 'text',
                     },
                     col: {xs: "12"},
                 },
@@ -60,7 +63,7 @@ export const useSubscriptionStructure = (isEdit: boolean = false) => {
                     name: "billingCycles",
                     label: "Quanti pagamenti prelevare",
                     dataElement: {
-                        type: 'number',
+                        type: 'text',
                     },
                     col: {xs: "12"},
                 },
@@ -69,19 +72,33 @@ export const useSubscriptionStructure = (isEdit: boolean = false) => {
                     name: "firstPrice",
                     label: "Prezzo aggiuntivo",
                     dataElement: {
-                        type: 'string',
+                        type: 'text',
                     },
                     col: {xs: "12"},
                 },
-        {
-            type: 'input',
-            name: "recurringSubscription",
-            label: "Calcolo prodotti",
-            dataElement: {
-                type: 'string',
-            },
-            col: {xs: "12"},
-        },
+        ...(dataForm.billingEvery && dataForm.billingTime?
+        [{
+            recurringSubscription: getArrayByNumber(12/ parseInt(dataForm.billingTime)).map((ele, index) => {
+                    return {
+                        [index]: [{
+                            products: {
+                                type: 'select',
+                                name: "products",
+                                label: "Periodo " + (index+1),
+                                dataElement: {
+                                    type: 'text',
+                                },
+                                multiple: true,
+                                options: products.map(ele => ({
+                                    label: ele.name, value: ele._id
+                                })),
+                                col: {xs: "12"},
+                            }
+                        }
+                        ]
+                    }
+            })
+        }] : []),
 
 ,
 
