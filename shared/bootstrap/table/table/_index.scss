@@ -1,5 +1,5 @@
-@import 'variables';
-@import './components/pagination';
+@import "variables";
+@import "./components/pagination";
 
 table.table-custom {
   width: 100%;
@@ -12,11 +12,14 @@ table.table-custom {
 
     tr {
       font-size: $fontSizeTHeader;
-      text-transform: uppercase;
+      //text-transform: uppercase;
 
       th {
         padding: 18px 20px;
-        border: none;
+        border-bottom: 1px solid $bg-light;
+        font-size: 12px;
+        color: $gray-dark;
+        font-weight: 400;
 
         &:first-child {
           border-top-left-radius: $radiusTD;
@@ -43,7 +46,9 @@ table.table-custom {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        border: none;
+        border-bottom: 1px solid $bg-light;
+        font-size: 12px;
+        color: #000;
       }
 
       &:hover {

@@ -11,6 +11,7 @@ import {useAppDispatch} from "../store/hooks";
 import {useRouter} from "next/router";
 import LoaderFullScreen from "../shared/ui/loader/loaderFullscreen/LoaderFullScreen";
 import {selectActiveLoad} from "../store/loadSlice";
+import SidebarMenu from "./sidebarMenu/SidebarMenu";
 axios.interceptors.request.use(authInterceptor)
 axios.interceptors.response.use((config) => config, status401Interceptor)
 
@@ -42,7 +43,7 @@ export default function Init({ Component, pageProps }: AppProps) {
         <>
           <LoaderFullScreen show={showLoader}/>
           <main>
-            {/*{isLogged && user && <SidebarMenu user={user}/>}*/}
+            {isLogged && user && <SidebarMenu user={user}/>}
               <div className={'container-fluid p-4 mb-4'}>
                 <div className="row">
                   <div className="col-12">

@@ -1,5 +1,5 @@
 // Typography
-$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 $font-size-base: 1rem; //16
 $font-size-sm: $font-size-base * .875;
 $font-size-lg: $font-size-base * 1.25;
@@ -18,11 +18,11 @@ $h6-font-size: $font-size-base;
 
 
 // Colors
-$primary: #6AC562;
+$primary: #50159e;
 $secondary: #D94BA6;
 $secondary-dark: #A57E97;
 $default: #3A3C58;
-$dark: #3A3C58;
+$dark: #333;
 $dark-hover: #454769;
 
 
@@ -31,7 +31,7 @@ $gray-200: #D8D8D8;
 
 //$bg-dark: #262626;
 $bg-light: #F5F7F7;
-$gray-light: #f8f8f8;
+$gray-light: #d2d2d3;
 $gray-dark: #6E7878;
 $light: #fff;
 $error: #dc3545;
@@ -67,18 +67,18 @@ $gradient-gray: linear-gradient(46deg, rgba(237, 242, 245, 0.50) 0%, rgba(231, 2
 $gradient-light: linear-gradient(135deg, #F1F5F7 0%, #DCE6EB 100%);
 $light-blue: #DCE6EB;
 $link-color: $primary;
-$link-hover-color: #26aee6;
+$link-hover-color: #5911BAFF;
 $link-decoration: none;
 
-$border-color: rgba(0, 47, 90, 0.40);
-$border-radius: 1rem;
+$border-color: #d2d2d3;
+$border-radius: 0.5rem;
 $btn-border-radius: 1rem/2;
 
 $box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.24);
 $box-shadow-hover: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
 
 $input-btn-padding-y: 0.563em;
-$input-bg: $gray-light;
+$input-bg: $light;
 
 $input-height: 44px;
 $labelColor: $dark;

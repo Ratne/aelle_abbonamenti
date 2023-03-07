@@ -1,7 +1,7 @@
 export const colorTheme = {
     primary: "#6AC562",
     secondary: "#D94BA6",
-    dark: "#3A3C58",
+    dark: "#333",
     darkHover: "#454769",
     gray: "#DCE6EB",
     gray200: "#D8D8D8",

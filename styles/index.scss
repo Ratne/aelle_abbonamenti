@@ -2,10 +2,60 @@
 
 @import "~bootstrap/scss/bootstrap";
 @import "shared";
+@import "menu";
 
 html, body {
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #eaeaf4;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100vh;
+  flex-shrink: 0;
+}
+
+footer {
+  height: 24px;
+  margin-top: -24px;
+  background: #DCE6EB;
+}
+
+
+.min-width-200 {
+  min-width: 200px;
+}
+
+.box-logo {
+  padding: 13px;
+  background-color: #2b0069;
+  color: $light;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.sidebar {
+  z-index: 100;
+}
+
+.heading-card {
+  margin-left: -25px;
+  margin-top: -25px;
+  margin-right: -25px;
+
+  &.sh.card {
+    border-radius: 0px;
+  }
 }

@@ -1,8 +1,7 @@
 .sh {
   &.btn {
     width: auto;
-    height: 44px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     border-radius: $btn-border-radius;
     line-height: normal;
     padding-left: 24px;
@@ -10,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: $box-shadow;
+    font-size: 14px;
+    // box-shadow: $box-shadow;
 
     &.btn-default {
       background-color: $default;

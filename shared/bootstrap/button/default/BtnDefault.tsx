@@ -23,6 +23,7 @@ function BtnDefault({
                         ...rest
                     }: ButtonProps) {
     const classList = classByArray(['sh btn', `btn-${variant}`, className])
+    console.log(iconSize)
     return (
         <button type="button" className={classList} {...rest}>
             {icon && <IconSVG icon={icon} size={iconSize} className={`${children ? 'me-2' : ''}`}
