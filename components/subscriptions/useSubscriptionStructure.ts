@@ -76,7 +76,7 @@ export const useSubscriptionStructure = (products: any[] = [], dataForm: any, is
                     },
                     col: {xs: "12"},
                 },
-        ...(dataForm.billingEvery && dataForm.billingTime?
+        ...(dataForm.billingEvery === 'month' && dataForm.billingTime?
         [{
             recurringSubscription: getArrayByNumber(12/ parseInt(dataForm.billingTime)).map((ele, index) => {
                     return {

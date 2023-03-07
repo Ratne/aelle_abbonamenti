@@ -5,16 +5,31 @@ import httpData from "../shared/utils/httpData";
 import authInterceptor from "../interceptor/authInterceptor";
 import axios from "axios";
 import http from "../shared/utils/http";
+
+import { Provider } from 'react-redux';
+import {store} from "../store/store";
+import {decrementN, incrementN} from "../store/loadSlice";
+import Init from "../components/Init";
+import status401Interceptor from "../interceptor/status401Interceptor";
 axios.interceptors.request.use(authInterceptor)
 
-
-export default function App({ Component, pageProps }: AppProps) {
-  const [user, setUser] = useState();
-  useEffect(() => {
-    httpData.url = process.env.NEXT_PUBLIC_REACT_APP_URL || '';
-    http.get('/api/private/logged').then(res => {
-        setUser(res.data)
-    })
-  },[])
-  return <Component user={user} {...pageProps} />
+axios.interceptors.response.use((config) => config, status401Interceptor)
+axios.interceptors.request.use((config) => {
+  store.dispatch(incrementN());
+  return config;
+});
+axios.interceptors.response.use(
+    (config: any) => {
+      store.dispatch(decrementN());
+      return config;
+    },
+    (err) => {
+      store.dispatch(decrementN());
+      return Promise.reject(err);
+    }
+);
+export default function App(props: AppProps) {
+  return <Provider store={store}>
+      <Init {...props} />
+  </Provider>
 }
