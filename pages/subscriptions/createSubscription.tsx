@@ -1,35 +1,40 @@
-import React from "react";
 import {UseFormSubmitModel} from "../../shared/utils/forms/models/UseFormModel";
 import {useForm} from "../../shared/utils/forms/useForm";
-import {FormElements} from "../../shared/bootstrap/form/FormElements";
-import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
-import {createProduct} from "../../services/products.service";
-import {useProductStructure} from "../../components/products/useProductStructure";
-import Card from "../../shared/ui/card/Card";
 import BtnSecondary from "../../shared/bootstrap/button/secondary/BtnSecondary";
+import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
+import {FormElements} from "../../shared/bootstrap/form/FormElements";
+import React, {useEffect, useState} from "react";
+import Card from "../../shared/ui/card/Card";
+import {createProduct, getProducts} from "../../services/products.service";
+import {useProductStructure} from "../../components/products/useProductStructure";
+import {useSubscriptionStructure} from "../../components/subscriptions/useSubscriptionStructure";
+import {createSubscription} from "../../services/subscriptions";
 
-const CreateProduct: React.FC = () => {
-
-
+export default function CreateSubscription() {
+    const [products, setProducts] = useState();
     const submitHandler: UseFormSubmitModel = (event, data) => {
-        createProduct(data).then(res => {
+        createSubscription(data).then(res => {
             console.log(res)
         })
     };
 
-
-    const {structureData, validationData} = useProductStructure();
     const {
         isSubmit,
         errors,
         submitAction,
         changeValue,
         dataForm,
+        dataFormatted,
         setData
     } = useForm(submitHandler);
-
-    const closeCreateProduct = () => {
-        window.location.href = '/products'
+    const {structureData, validationData} = useSubscriptionStructure(products, dataForm);
+    useEffect(() => {
+        getProducts().then(res => {
+            setProducts(res.data)
+        })
+    }, [])
+    const closeCreateSub = () => {
+        window.location.href = '/subscriptions'
     }
 
     return (
@@ -37,13 +42,13 @@ const CreateProduct: React.FC = () => {
             <Card classCard={'heading-card'}>
                 <div className="row border-bottom pb-4">
                     <div className="col-auto ms-auto d-flex gap-2">
-                        <BtnSecondary onClick={closeCreateProduct}>Dismiss</BtnSecondary>
+                        <BtnSecondary onClick={closeCreateSub}>Dismiss</BtnSecondary>
                         <BtnPrimary onClick={submitAction}>Create</BtnPrimary>
                     </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-12 col-lg-9 col-xl-8 col-xxl-7">
-                        <h2 className={'text-primary border-bottom border-gray-light pb-2'}>Create a Product</h2>
+                        <h2 className={'text-primary border-bottom border-gray-light pb-2'}>Create a Subscription</h2>
                         <form className={"mt-4"} onSubmit={submitAction}>
                             <FormElements
                                 structure={structureData}
@@ -56,9 +61,8 @@ const CreateProduct: React.FC = () => {
                     </div>
                 </div>
             </Card>
+
+
         </div>
-    );
+    )
 }
-
-
-export default CreateProduct

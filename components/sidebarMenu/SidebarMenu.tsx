@@ -31,6 +31,13 @@ const SidebarMenu = ({user}: { user?: any }) => {
             link: '/offices',
             isActive: false,
         },
+        {
+            name: 'subscriptions',
+            label: 'Subscriptions',
+            icon: 'sign_up',
+            link: '/subscriptions',
+            isActive: false,
+        },
         /* {
              name: 'aaa',
              label: 'Aziende',

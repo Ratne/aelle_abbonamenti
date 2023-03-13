@@ -5,8 +5,10 @@ import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
 import {useLoginStructure} from "./useLoginStructure";
 import {UseFormSubmitModel} from "../../shared/utils/forms/models/UseFormModel";
 import {number} from "prop-types";
+import Card from "../../shared/ui/card/Card";
 
-const LoginContainer = ({ loginHandler,
+const LoginContainer = ({
+                            loginHandler,
                             goToRecoverPswHandler,
                             isLoading
                         }: {
@@ -33,26 +35,28 @@ const LoginContainer = ({ loginHandler,
 
         return (
 
-            <div className={"login-container mt-xl-5 mt-sm-0"}>
-                <div className="fs-4 p-4 bg-light text-center ">LOGO</div>
-                <div><h2 className={"text-center"}>Login</h2></div>
+            <div className={"login-container mt-xl-5  mt-sm-0"}>
+                <Card>
+                    <div className="fs-4 p-4 bg-light text-center ">LOGO</div>
+                    <div><h2 className={"text-center"}>Login</h2></div>
 
-                <form className={"mt-4"} onSubmit={submitAction}>
+                    <form className={"mt-4"} onSubmit={submitAction}>
 
 
-                    <FormElements
-                        structure={structureLoginData}
-                        dataForm={dataForm}
-                        errors={errors}
-                        isSubmit={isSubmit}
-                        changeValue={changeValue}
-                    />
+                        <FormElements
+                            structure={structureLoginData}
+                            dataForm={dataForm}
+                            errors={errors}
+                            isSubmit={isSubmit}
+                            changeValue={changeValue}
+                        />
 
-                    <a className={"text-secondary pointer"} onClick={goToRecoverPswHandler}>Hai dimenticato la
-                        password?</a>
-                    <BtnPrimary className="w-100 justify-content-center mt-5" type="submit"
-                                disabled={isLoading}>Login</BtnPrimary>
-                </form>
+                        <a className={"text-secondary pointer"} onClick={goToRecoverPswHandler}>Hai dimenticato la
+                            password?</a>
+                        <BtnPrimary className="w-100 justify-content-center mt-5" type="submit"
+                                    disabled={isLoading}>Login</BtnPrimary>
+                    </form>
+                </Card>
             </div>
         );
     }
