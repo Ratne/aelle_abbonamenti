@@ -23,3 +23,6 @@ export const createCart = (data : any) => {
 export const getSingleCart = (id: string)    => {
     return http.get(`/api/private/carts/${id}`)
 }
+export const getSingleCartByUrl = (url: string)    => {
+    return http.get(`/api/carts/${url}`)
+}
