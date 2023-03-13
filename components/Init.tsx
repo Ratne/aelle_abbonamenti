@@ -12,6 +12,7 @@ import {useRouter} from "next/router";
 import LoaderFullScreen from "../shared/ui/loader/loaderFullscreen/LoaderFullScreen";
 import {selectActiveLoad} from "../store/loadSlice";
 import SidebarMenu from "./sidebarMenu/SidebarMenu";
+import {setI18n} from "../shared/utils/languages/config/i18n";
 axios.interceptors.request.use(authInterceptor)
 axios.interceptors.response.use((config) => config, status401Interceptor)
 
@@ -21,8 +22,12 @@ export default function Init({ Component, pageProps }: AppProps) {
   const user = useSelector(selectUser);
   const isLogged = useSelector(selectIsLogged);
   const showLoader = useSelector(selectActiveLoad)
+  const [initLanguage, setInitLanguage] = useState<boolean>(false)
+
   const dispatch = useAppDispatch();
   useEffect(() => {
+    setI18n('it', () => setInitLanguage(true));
+
     httpData.url = process.env.NEXT_PUBLIC_REACT_APP_URL || '';
     http.get('/api/private/logged').then(res => {
       dispatch(setUser(res.data))

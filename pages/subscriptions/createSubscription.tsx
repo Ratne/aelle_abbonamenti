@@ -5,8 +5,7 @@ import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
 import {FormElements} from "../../shared/bootstrap/form/FormElements";
 import React, {useEffect, useState} from "react";
 import Card from "../../shared/ui/card/Card";
-import {createProduct, getProducts} from "../../services/products.service";
-import {useProductStructure} from "../../components/products/useProductStructure";
+import {getProducts} from "../../services/products.service";
 import {useSubscriptionStructure} from "../../components/subscriptions/useSubscriptionStructure";
 import {createSubscription} from "../../services/subscriptions";
 
@@ -18,21 +17,30 @@ export default function CreateSubscription() {
         })
     };
 
+
     const {
         isSubmit,
         errors,
         submitAction,
         changeValue,
-        dataForm,
         dataFormatted,
-        setData
+        dataForm,
+        setData,
+        setValidations
     } = useForm(submitHandler);
+
     const {structureData, validationData} = useSubscriptionStructure(products, dataForm);
+
     useEffect(() => {
         getProducts().then(res => {
             setProducts(res.data)
         })
     }, [])
+
+    useEffect(() => {
+        setValidations(validationData)
+    }, [dataForm])
+
     const closeCreateSub = () => {
         window.location.href = '/subscriptions'
     }

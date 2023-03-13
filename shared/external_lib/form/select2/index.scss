@@ -4,7 +4,8 @@
 
   &.select2-container--default {
     .select2-selection--single, .select2-selection--multiple {
-      border: none;
+      // border: none;
+      border-color: $border-color;
       border-radius: $btn-border-radius;
       background-color: $input-bg;
       font-size: 16px;
@@ -20,7 +21,7 @@
       .select2-selection__choice {
         border: none;
         margin-top: 0px;
-        background-color: $secondary;
+        background-color: $default;
         color: $light;
         padding: 4px;
 
@@ -28,6 +29,16 @@
           color: $light;
           padding-right: 6px;
         }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 7px;
+        top: 42%;
+        border-top: 5px solid #888;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
       }
     }
 
@@ -42,7 +53,6 @@
     .select2-container-dropdown {
       &.select2-container--open {
         .select2-dropdown {
-          border: none;
           border-radius: $btn-border-radius;
           border-top-right-radius: 0px;
           border-top-left-radius: 0px;
