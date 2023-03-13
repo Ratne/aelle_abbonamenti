@@ -5,18 +5,29 @@ import Dropdown from "../../shared/bootstrap/dropdown/Dropdown";
 import {IconSVG} from "../../shared/ui/icon/IconSVG";
 import {colorTheme} from "../../shared/colorUtils";
 
-const ListOffices = ({listOffices}: { listOffices: any[] }) => {
+const ListCarts = ({listCarts}: { listCarts: any[] }) => {
 
     const tableStructure: TableData[] = [
         {
-            name: "name",
-            label: "Name",
+            name: "customer",
+            label: "Customer Info",
         },
         {
-            name: "email",
-            label: "Email",
+            name: "subscription",
+            label: "Subscription Info",
         },
-
+        {
+            name: "payment",
+            label: "Net Payment",
+        },
+        {
+            name: "createdOn",
+            label: "Created On",
+        },
+        {
+            name: "address",
+            label: "Billing Address",
+        },
         {
             name: "action",
             label: "",
@@ -24,6 +35,9 @@ const ListOffices = ({listOffices}: { listOffices: any[] }) => {
         },
     ];
     const templates: TemplateTable = {
+        customer: (value, row) => (
+            <span>{row.email || '-'}</span>
+        ),
 
         action: (value, row) => (
             <div className={"d-flex justify-content-end "}> {/*da mettere bene il dropdown*/}
@@ -40,11 +54,11 @@ const ListOffices = ({listOffices}: { listOffices: any[] }) => {
         <div>
             <div className={"row justify-content-center"}>
                 <div className={"col-sm-12"}>
-                    <Table columns={tableStructure} data={listOffices} templates={templates} elementsForPage={50}/>
+                    <Table columns={tableStructure} data={listCarts} templates={templates} elementsForPage={50}/>
                 </div>
             </div>
         </div>
     );
 };
 
-export default ListOffices;
+export default ListCarts;

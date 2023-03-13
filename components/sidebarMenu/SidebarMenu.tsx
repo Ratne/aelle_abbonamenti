@@ -39,10 +39,10 @@ const SidebarMenu = ({user}: { user?: any }) => {
             isActive: false,
         },
         {
-            name: 'cart',
-            label: 'Cart',
+            name: 'carts',
+            label: 'Carts',
             icon: 'cart',
-            link: '/cart',
+            link: '/carts',
             isActive: false,
         },
         /* {
