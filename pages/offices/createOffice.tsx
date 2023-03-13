@@ -1,16 +1,10 @@
 import {UseFormSubmitModel} from "../../shared/utils/forms/models/UseFormModel";
-import {createUser} from "../../services/users.service";
-import {useUserStructure} from "../../components/users/useUserStructure";
 import {useForm} from "../../shared/utils/forms/useForm";
 import BtnSecondary from "../../shared/bootstrap/button/secondary/BtnSecondary";
 import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
-import ModalCustom from "../../shared/bootstrap/modal/ModalCustom";
 import {FormElements} from "../../shared/bootstrap/form/FormElements";
-import React from "react";
+import React, {useEffect} from "react";
 import Card from "../../shared/ui/card/Card";
-import {colorTheme} from "../../shared/colorUtils";
-import {createProduct} from "../../services/products.service";
-import {useProductStructure} from "../../components/products/useProductStructure";
 import {createOffice} from "../../services/offices.service";
 import {useOfficeStructure} from "../../components/offices/useOfficeStructure";
 
@@ -29,8 +23,13 @@ export default function CreateOffice() {
         submitAction,
         changeValue,
         dataForm,
-        setData
+        setData,
+        setValidations
     } = useForm(submitHandler);
+    useEffect(() => {
+        setValidations(validationData)
+    }, [dataForm])
+
     const closeCreateUser = () => {
         window.location.href = '/offices'
     }

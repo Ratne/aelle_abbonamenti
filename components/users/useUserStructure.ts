@@ -3,7 +3,7 @@ import {createStructureForm} from "../../shared/utils/forms/useStructureForm";
 export const useUserStructure = (isEdit: boolean = false) => {
 
     const structureData = createStructureForm([
-            ...(isEdit? [] : [{
+        ...(isEdit ? [] : [{
             type: 'input',
             name: "email",
             label: "Email Utente",
@@ -12,20 +12,39 @@ export const useUserStructure = (isEdit: boolean = false) => {
             },
             col: {xs: "12"},
         },
-        {
-            type: 'input',
-            name: "password",
-            label: "Password accesso Utente",
-            dataElement: {
-                type: 'password',
-            },
-            col: {xs: "12"},
-        }]),
+            {
+                type: 'input',
+                name: "password",
+                label: "Password accesso Utente",
+                dataElement: {
+                    type: 'password',
+                },
+                col: {xs: "12"},
+            }]),
 
 
     ]);
 
     const validationData = {
+        ...(isEdit ? {} :
+                {
+                    email: {
+                        required: {
+                            params: {
+                                name: "email",
+                            },
+                        },
+                    },
+                    password: {
+                        required: {
+                            params: {
+                                name: "password",
+                            },
+                        },
+                    },
+                }
+        ),
+
     }
 
     return {

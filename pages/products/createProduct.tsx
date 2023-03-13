@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {UseFormSubmitModel} from "../../shared/utils/forms/models/UseFormModel";
 import {useForm} from "../../shared/utils/forms/useForm";
 import {FormElements} from "../../shared/bootstrap/form/FormElements";
@@ -25,8 +25,12 @@ const CreateProduct: React.FC = () => {
         submitAction,
         changeValue,
         dataForm,
-        setData
+        setData,
+        setValidations
     } = useForm(submitHandler);
+    useEffect(() => {
+        setValidations(validationData)
+    }, [dataForm])
 
     const closeCreateProduct = () => {
         window.location.href = '/products'

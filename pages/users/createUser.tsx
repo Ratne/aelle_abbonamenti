@@ -6,7 +6,7 @@ import BtnSecondary from "../../shared/bootstrap/button/secondary/BtnSecondary";
 import BtnPrimary from "../../shared/bootstrap/button/primary/BtnPrimary";
 import ModalCustom from "../../shared/bootstrap/modal/ModalCustom";
 import {FormElements} from "../../shared/bootstrap/form/FormElements";
-import React from "react";
+import React, {useEffect} from "react";
 import Card from "../../shared/ui/card/Card";
 import {colorTheme} from "../../shared/colorUtils";
 
@@ -25,8 +25,13 @@ export default function CreateUser() {
         submitAction,
         changeValue,
         dataForm,
-        setData
+        setData,
+        setValidations
     } = useForm(submitHandler);
+    
+    useEffect(() => {
+        setValidations(validationData)
+    }, [dataForm])
 
     const closeCreateUser = () => {
         window.location.href = '/users'
